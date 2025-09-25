@@ -1,0 +1,89 @@
+body {
+    background-color: #f00;
+background-image: url("images/Wallpaper_mushroom.jpg");
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 0;
+    font-family: "Epunda Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  
+    /* Inter Weight: 100 – 900 */
+    font-style: normal;
+
+}
+
+/* only us id once per page, use a hashtag */
+#wrapper {
+    width: 80%;
+    background-color: rgb(4, 161, 201);
+    margin: 40px auto;
+    padding: 20px 100px;
+}
+
+header h1 {
+
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 66px;
+  color: #000;  
+}
+
+
+
+header h2 {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #0c0a0a;
+}
+header h3 {
+
+ font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;   
+color: #f00;
+}
+
+/* use them as many times as you like, use period */
+span.wow {
+    color: rgb(199, 228, 11);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+main p.types {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+main table{
+
+background-color: aqua;
+}
+
+Main table th{
+
+background-color: rgb(2, 76, 76);
+
+
+}
+
+main table td, main table th {
+
+ background-color: rgb(2, 76, 76);
+   
+
+}
+
+Main table td, main table th{
+
+  padding: 6px; 
+
+  border: 1px solid #141313;
+ 
+}
