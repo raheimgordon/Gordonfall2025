@@ -1,0 +1,140 @@
+body {
+    background-color: #000;
+    background-image: url("images/moss04.jpg");
+    background-attachment: fixed;
+  /* background-repeat: no-repeat; */
+    /* background-position-y: bottom;  */
+
+    margin: 0;
+    padding: 0;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    /* 200 – 800 */
+    font-style: normal;
+
+}
+
+/* id rule uses hashtag #, only one per page */
+#wrapper {
+    margin: 100px auto;
+    width: 60%;
+    background-color: #fff;
+    padding: 30px 50px;
+        /* background-image: url("images/moss03.jpg"); */
+}
+
+/* class rules use a period to make a rule about a class, use multiple times */
+.wow {
+    color: #f00;
+    font-weight: 900;
+    font-style: italic;
+}
+
+header h1 {
+
+    font-family: "Bitcount Ink", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    /* 100-900 */
+    font-style: normal;
+    font-variant: small-caps;
+    font-size: 66px;
+}
+
+main p {
+
+    font-size: 18px;
+    line-height: 24px;
+}
+
+main h2 { 
+border: #f00 10px  dotted;
+background-color: #D2E82A;
+padding: 120px 10px 10px 10px ;
+margin: 40px 0px ;
+font: 44px;
+
+
+}
+main div.featuredImageOne {
+    border: solid #f00 10px;
+    background-color: #D2E82A;
+    padding: 60px;
+    margin: 100px auto ;
+    width: 400px ;
+    text-align: center ;
+}
+main div.featuredImageOne img {
+    width:200px;
+}
+
+
+main div.featuredImageTwo {
+    border: solid rgb(169, 11, 119) 10px;
+    background-color: #d00a21;
+    padding: 60px;
+    margin: 100px auto ;
+    width: 400px ;
+    text-align: center ;
+}
+main div.featuredImageTwo img {
+    width:200px;
+}
+
+
+
+table, th, td, tr {
+margin: 0px;
+padding: 0px;
+
+}
+
+
+main table {
+border: 10px solid rgb(192, 192, 192);
+    background-color: rgb(255, 207, 74);
+
+}
+
+main table th {
+border: 5px solid rgb(0, 0, 0);
+    background-color: rgb(155, 155, 155);
+        font-family: "Bitcount Ink", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    /* 100-900 */
+    font-style: normal;
+    font-variant: small-caps;
+    font-size: 33px;
+    padding:22px;
+
+}
+
+main table td {
+border: 5px solid rgb(77, 77, 77);
+    background-color: rgb(255, 255, 255);
+
+}
+
+nav{
+background-color: rgba(3, 111, 53, 0.749);
+padding: 44px 0px;
+text-align: center;
+}
+
+nav a {
+
+font-size: 33px ;
+border: #f00 5px ;
+background-color: #D2E82A;
+padding: 22px ;
+margin: 20px;
+
+}
+
+nav a:hover {
+
+background-color: #fff;
+
+}
