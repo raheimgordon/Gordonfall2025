@@ -1,0 +1,91 @@
+/* START border-box fix */
+html {
+  box-sizing: border-box;
+}
+/* asterisk (*) symbol represents the universal selector. Its primary function is to select all elements of any type within the document. */
+/* :before is a pseudo-element used to insert content before the actual content of a selected element. It creates a "virtual" first child within the element, allowing you to style and add content that isn't directly present in your HTML markup. */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* END border-box fix */
+
+body {
+background-color: blueviolet;
+padding: 0px ;
+margin: 0px ;
+}
+
+#wrapper {
+    max-width: 1500px;
+    background-color: #fff;
+    border: solid #000000 10px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Add padding to all of the #wrapper child elements, >* symbol looks for first child in inside the selector */
+#wrapper>* {
+  padding: 20px;
+}
+
+header {
+    background: skyblue;
+    order: 1;
+    flex: 0 0 100%;
+    opacity: 0.8;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+main {
+    background: slategray;
+    order: 3;
+    flex: 1 1 500px;
+}
+
+/* SUBSCRIBE BUTTON */
+main div.buttonAbsolute {
+    background-color: rgb(255, 208, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 150px;
+    opacity: 0.9;
+    padding: 15px;
+    border-radius: 125px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+/* view gallery button */
+main div.buttonRelative {
+    background-color: rgb(255, 208, 0);
+    width: 100px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    left: 40px;
+    z-index: 3;
+}
+
+nav {
+    background: cadetblue;
+    order: 2;
+    flex: 1 0 200px;
+}
+aside {
+    background: seagreen;
+    order: 4;
+    flex: 1 0 200px;
+}
+footer {
+    background: darkslateblue;
+    order: 5;
+    flex: 0 0 100%;
+}
