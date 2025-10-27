@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Session 06 — CSS Float & Inline-Block Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Fungi Layout Experiments</h1>
+      <p>Session 06: Floats, Clearing, and Inline-Block Practice</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="history.html">HISTORY</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article>
+        <h2>Exploring Fungi Design</h2>
+
+        <section>
+          <h3>Float Example</h3>
+          <img src="Images/Amanita_muscaria_(38010247562).jpg" alt="Amanita muscaria" class="float-left">
+          <p>
+            <code>float: left;</code>  
+            Floats were one of the earliest ways to create web layouts before Flexbox and Grid.
+          </p>
+        </section>
+
+        <section class="clearfix">
+          <h3>Inline-Block Example</h3>
+          <div class="inline-box"> Box A</div>
+          <div class="inline-box"> Box B</div>
+          <div class="inline-box"> Box C</div>
+          <p>
+            The <code>inline-block</code> property lets elements behave like text — they line up horizontally while keeping box properties such as padding and borders.
+          </p>
+        </section>
+
+        <section class="clearfix">
+          <h3>Floating Image Gallery</h3>
+          <div class="gallery">
+            <img src="Images/GED_041109_0187.jpg" alt="Porcelain fungus">
+            <img src="Images/shiitake-mushrooms-thumbnail.webp" alt="Shiitake mushroom">
+            <img src="Images/GED_041109_0187.jpg" alt="Turkey Tail fungus">
+            <img src="Images/5-fingers-of-morels.jpg" alt="Morel mushroom">
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <aside>
+      <h3>Did You Know?</h3>
+      <p>Fungi recycle nutrients from dead organic matter and are crucial for forest ecosystems. Some even glow in the dark — bioluminescent mushrooms!</p>
+    </aside>
+
+    <footer>
+    Images via Wikimedia Commons
+    </footer>
+  </div>
+</body>
+</html>
