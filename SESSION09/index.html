@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Coffee - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #2c1810;
+            background-color: #f5f1ed;
+            line-height: 1.6;
+        }
+
+        /* FLEXBOX NAVIGATION */
+        nav {
+            background-color: #3e2723;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #d7ccc8;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #d7ccc8;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #8d6e63;
+        }
+
+        /* GRID LAYOUT */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6d4c41 0%, #4e342e 100%);
+            color: #d7ccc8;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        main {
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #3e2723;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #8d6e63;
+            padding-bottom: 0.5rem;
+        }
+
+        article {
+            background-color: #ffffff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        article h3 {
+            font-family: 'Playfair Display', serif;
+            color: #4e342e;
+            margin-bottom: 1rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #5d4037;
+        }
+
+        aside {
+            background-color: #efebe9;
+            padding: 2rem;
+            border-left: 4px solid #8d6e63;
+            margin: 2rem 0;
+        }
+
+        aside h3 {
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            margin-bottom: 1rem;
+        }
+
+        .external-link {
+            color: #6d4c41;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid #8d6e63;
+            transition: all 0.3s ease;
+        }
+
+        .external-link:hover {
+            color: #8d6e63;
+        }
+
+        footer {
+            background-color: #3e2723;
+            color: #d7ccc8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Coffee Culture</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animation.html">Brewing Process</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>The Art of Coffee</h1>
+            <p>Exploring the rich culture and craft behind every cup</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Welcome to Coffee Culture</h2>
+                <p class="intro-text">Coffee is more than just a beverage. It is a global phenomenon that connects cultures, fuels conversations, and brings people together. From the highlands of Ethiopia to the bustling cafes of modern cities, coffee has woven itself into the fabric of human experience.</p>
+            </section>
+
+            <section>
+                <h2>The History of Coffee</h2>
+                <article>
+                    <h3>Ancient Origins</h3>
+                    <p>The story of coffee begins in the ancient coffee forests of Ethiopia. According to legend, a goat herder named Kaldi discovered coffee after noticing his goats became energetic after eating berries from a certain tree. The knowledge of these energizing berries spread across the Arabian Peninsula, where coffee cultivation began in earnest.</p>
+                </article>
+
+                <article>
+                    <h3>Global Expansion</h3>
+                    <p>By the 15th century, coffee was being grown in Yemen, and by the 16th century, it had spread to Persia, Egypt, Syria, and Turkey. Coffee houses became centers of social activity and communication. By the 17th century, coffee had made its way to Europe and then to the Americas, forever changing global culture and commerce.</p>
+                </article>
+            </section>
+
+            <aside>
+                <h3>Did You Know?</h3>
+                <p>Coffee is the second most traded commodity in the world after crude oil. Over 2.25 billion cups of coffee are consumed every day worldwide. The word "coffee" comes from the Arabic word "qahwah" which means strength.</p>
+            </aside>
+
+            <section>
+                <h2>Learn More</h2>
+                <p>To dive deeper into coffee culture and history, visit the <a href="https://www.nationalgeographic.com/culture/article/coffee-history" target="_blank" rel="noopener noreferrer" class="external-link">National Geographic's History of Coffee</a> or explore the <a href="https://www.ico.org/" target="_blank" rel="noopener noreferrer" class="external-link">International Coffee Organization</a> for global coffee statistics and information.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Coffee Culture Project | Educational Website</p>
+            <p>Sources: National Geographic, International Coffee Organization</p>
+        </footer>
+    </div>
+</body>
+</html>
