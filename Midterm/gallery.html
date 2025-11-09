@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Coffee - Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #2c1810;
+            background-color: #f5f1ed;
+            line-height: 1.6;
+        }
+
+        /* FLEXBOX NAVIGATION */
+        nav {
+            background-color: #3e2723;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #d7ccc8;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #d7ccc8;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #8d6e63;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6d4c41 0%, #4e342e 100%);
+            color: #d7ccc8;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #3e2723;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* GRID LAYOUT FOR GALLERY */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #8d6e63 0%, #5d4037 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #d7ccc8;
+        }
+
+        .gallery-content {
+            padding: 1.5rem;
+        }
+
+        .gallery-content h3 {
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .gallery-content p {
+            color: #5d4037;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* COFFEE TYPES GRID */
+        .coffee-types {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .coffee-card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 5px solid #8d6e63;
+        }
+
+        .coffee-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .coffee-card p {
+            color: #5d4037;
+            margin-bottom: 0.5rem;
+        }
+
+        .coffee-card .origin {
+            font-weight: 700;
+            color: #6d4c41;
+        }
+
+        /* RESOURCES SECTION */
+        .resources {
+            background-color: #efebe9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .resources h3 {
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            margin-bottom: 1rem;
+        }
+
+        .resources ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .resources li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .resources li::before {
+            content: '☕';
+            position: absolute;
+            left: 0;
+        }
+
+        .resources a {
+            color: #6d4c41;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid #8d6e63;
+            transition: all 0.3s ease;
+        }
+
+        .resources a:hover {
+            color: #8d6e63;
+        }
+
+        footer {
+            background-color: #3e2723;
+            color: #d7ccc8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .coffee-types {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Coffee Culture</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animation.html">Brewing Process</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Coffee Gallery</h1>
+        <p>Exploring varieties and traditions from around the world</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Coffee Around the World</h2>
+            <div class="gallery-grid">
+                <article class="gallery-item">
+                    <div class="gallery-image">🌍</div>
+                    <div class="gallery-content">
+                        <h3>Ethiopian Coffee Ceremony</h3>
+                        <p>The Ethiopian coffee ceremony is an important social ritual. Coffee beans are roasted, ground, and brewed in front of guests, creating a communal experience that can last several hours.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <div class="gallery-image">🇮🇹</div>
+                    <div class="gallery-content">
+                        <h3>Italian Espresso Culture</h3>
+                        <p>In Italy, espresso is more than a drink. It is a way of life. Italians typically enjoy their espresso standing at the bar, quickly consumed as part of their daily routine.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <div class="gallery-image">🇹🇷</div>
+                    <div class="gallery-content">
+                        <h3>Turkish Coffee Tradition</h3>
+                        <p>Turkish coffee is prepared in a special pot called a cezve. The coffee is finely ground and brewed with sugar, creating a strong, thick drink served in small cups with the grounds.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <div class="gallery-image">🇻🇳</div>
+                    <div class="gallery-content">
+                        <h3>Vietnamese Iced Coffee</h3>
+                        <p>Vietnamese coffee, known as Ca Phe Sua Da, combines strong dark roast coffee with sweetened condensed milk and ice, creating a rich, sweet, and refreshing beverage.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <div class="gallery-image">🇨🇴</div>
+                    <div class="gallery-content">
+                        <h3>Colombian Coffee Farms</h3>
+                        <p>Colombia's coffee growing region is known for producing some of the finest Arabica beans in the world. The mountainous terrain and climate create ideal growing conditions.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <div class="gallery-image">🇯🇵</div>
+                    <div class="gallery-content">
+                        <h3>Japanese Coffee Ritual</h3>
+                        <p>Japan has embraced coffee culture with precision and artistry. Pour-over methods and siphon brewing are popular, with cafes treating coffee preparation as a refined craft.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Popular Coffee Varieties</h2>
+            <div class="coffee-types">
+                <article class="coffee-card">
+                    <h3>Arabica</h3>
+                    <p class="origin">Origin: Ethiopia, now grown worldwide</p>
+                    <p>Arabica beans represent about 60 to 70 percent of the world's coffee production. They have a sweeter, softer taste with notes of sugar, fruit, and berries. Arabica plants grow best at higher elevations and are more delicate than Robusta.</p>
+                </article>
+
+                <article class="coffee-card">
+                    <h3>Robusta</h3>
+                    <p class="origin">Origin: Sub-Saharan Africa</p>
+                    <p>Robusta beans have a stronger, harsher taste with a grain-like overtone and nutty aftertaste. They contain almost double the caffeine of Arabica beans and are often used in espresso blends for added crema and body.</p>
+                </article>
+
+                <article class="coffee-card">
+                    <h3>Colombian Supremo</h3>
+                    <p class="origin">Origin: Colombia</p>
+                    <p>Colombian Supremo is the highest grade of Colombian coffee. It is known for its smooth, well-balanced flavor with medium body and bright acidity. The beans are large and produce a clean, sweet cup.</p>
+                </article>
+
+                <article class="coffee-card">
+                    <h3>Sumatra Mandheling</h3>
+                    <p class="origin">Origin: Sumatra, Indonesia</p>
+                    <p>Sumatra Mandheling is known for its full body, low acidity, and earthy, herbal notes. The unique wet-hulling processing method gives it a distinctive flavor profile that coffee enthusiasts seek out.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="resources">
+            <h3>Learn More About Coffee</h3>
+            <ul>
+                <li><a href="https://www.coffeeresearch.org/" target="_blank" rel="noopener noreferrer">Coffee Research Institute</a> - Comprehensive coffee science and research</li>
+                <li><a href="https://www.sca.coffee/" target="_blank" rel="noopener noreferrer">Specialty Coffee Association</a> - Industry standards and education</li>
+                <li><a href="https://www.worldcoffeeresearch.org/" target="_blank" rel="noopener noreferrer">World Coffee Research</a> - Global coffee sustainability and science</li>
+                <li><a href="https://www.smithsonianmag.com/arts-culture/the-history-of-coffee-126388696/" target="_blank" rel="noopener noreferrer">Smithsonian Magazine</a> - The history and culture of coffee</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Coffee Culture Project | Educational Website</p>
+        <p>Sources: Coffee Research Institute, Specialty Coffee Association, World Coffee Research</p>
+    </footer>
+</body>
+</html>
